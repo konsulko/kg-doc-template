@@ -1895,12 +1895,12 @@ Online Appendix to:\par\@title\par{}}}\vskip 12\p@
 \newdef{remark}[theorem]{Remark}
 
 % Page number Panel
-\def\openartnum{\vbox to 1.125in{\vskip.125in\vfill\hbox to 26pt{\textcolor{white}{\fontfamily{\sfdefault}\fontsize{12}{7}\selectfont\bfseries\@acmArticle}\hfill}\vfill}}
-\def\closeartnum{\vbox to 1.125in{\vskip-.125in\vfill\hbox to 26pt{\textcolor{white}{\fontfamily{\sfdefault}\fontsize{12}{7}\selectfont\bfseries\@acmArticle}\hfill}\vfill}}
+\def\openartnum{}
+\def\closeartnum{}
 \def\artnum{\vbox to 1in{\vfill\hbox to 26pt{\textcolor{white}{\fontfamily{\sfdefault}\fontsize{12}{7}\selectfont\bfseries\@acmArticle}\hfill}\vfill}}
 %
-\def\opentab{\hbox{\vrule width45.75pt depth0pt height1.125in\hspace*{-35.5pt}\openartnum}}
-\def\normtab{\hbox{\vrule width45.75pt depth0pt height1in\hspace*{-35.5pt}\artnum}}
+\def\opentab{}
+\def\normtab{}
 \def\closetab{\hbox{\vrule width45.75pt depth0pt height1.125in\hspace*{-35.5pt}\closeartnum}}
 %
 \newcommand\tab{\ifcase\@articleSeq\or
