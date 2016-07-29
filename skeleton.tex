@@ -1,0 +1,64 @@
+% Based on:
+% v2-acmsmall-sample.tex, dated March 6 2012
+% This is a sample file for ACM small trim journals
+%
+% Compilation using 'acmsmall.cls' - version 1.3 (March 2012), Aptara Inc.
+% (c) 2010 Association for Computing Machinery (ACM)
+%
+% Steps to compile: latex, bibtex, latex latex
+%
+% For tracking purposes => this is v1.3 - March 2012
+
+\documentclass[prodmode]{kgwpstd} % Aptara syntax
+
+% Package to generate and customize Algorithm as per ACM style
+\usepackage[ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+% Document starts
+\begin{document}
+
+% Page heads
+\markboth{Konsulko Group}{TITLE OF WHAT THIS PAPER IS ABOUT}
+
+% Title portion
+\title{THAT SAME TITLE AGAIN OVER HERE TOO}
+\author{YOUR NAME}
+
+\begin{bottomstuff}
+\end{bottomstuff}
+
+\maketitle
+
+\section{Section name}
+
+Here is a main section
+
+\subsection{Something related}
+
+Here is a subsection of that main section.
+
+\section{Rinse}
+
+And repeat.
+
+\begin{enumerate}
+	\item Sometimes you want to
+	\item make a
+	\item of things.
+\end{enumerate}
+
+And sometimes you want to \emph{emphasize} something or have a
+\url{http://some.website.com/}.  You may even want to make a
+simple\footnote{Referenced one time} footnote or a
+labeled\footnote{\label{labelname}footnote text} footnote that you reference
+again\footnotemark[\ref{labelname}].  Note that \emph{make} will \emph{fail}
+the first time you add this or after a clean and then be correct afterwards.
+The Makefile rules could use more tweaking.
+
+\end{document}
