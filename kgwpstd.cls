@@ -243,7 +243,7 @@
 % Including fonts for Production Mode
 \ifprod@mode
 % New Century Schoolbook as base font
-\renewcommand\rmdefault{pnc}
+\renewcommand\rmdefault{ptm}
 % Helvetica as second font
 \renewcommand\sfdefault{phv}
 \fi
@@ -466,7 +466,7 @@
 
 % Copyright Information
 \def\cpyright#1{\gdef\@cpyright{#1}}
-\cpyright{ACM\ \@permissionCodeOne/\@acmYear/\monthInf{\@acmMonth}-ART\@acmArticle}
+\cpyright{}
 
 % Calculating total pages
 \newcount\@totalpg
@@ -475,16 +475,14 @@
 
 % Reference Format
 \gdef\formatline{{\em{\@journalNameShort\ }}\@acmVolume, \@acmNumber, Article~\@acmArticle\ (\monthWord{\@acmMonth}\ \@acmYear), \@acmPages.\\ % Need Journal Name in italics - in 'ACM Reference Format' before 1. INTRODUCTION - Gerry - March 2012
-{\tt DOI:}http://dx.doi.org/10.1145/\@doi} % Gerry March 2012 - on first page in 'ACM Reference Format'
-\gdef\copyrightline{\copyright\ \@acmYear\ \@cpyright\ \$\@acmPrice}
-\gdef\doiline{{\tt DOI:}http://dx.doi.org/10.1145/\@doi} % Gerry - March 2012 - beneath copyright line
+\@doi} % Gerry March 2012 - on first page in 'ACM Reference Format'
 
 % Page Style
 \mark{{}{}}
 
 \def\ps@headings{%
     \let\@mkboth\@gobbletwo
-    \def\@oddhead{{\rhfont\rightmark}\hfill{\foliofont \@acmArticle:\thepage}}%
+    \def\@oddhead{{\rhfont\rightmark}\hfill{\foliofont \thepage}}%
     \def\@evenhead{{\foliofont \@acmArticle:\thepage}\hfill{\rhfont\leftmark}}%
     \def\@evenfoot{\null\hfill{\rfootfont\@runningfoot}}
     \def\@oddfoot{{\rfootfont\@runningfoot} \hfill\null}%
@@ -712,8 +710,6 @@
 	Copyright 2016 Konsulko Group. CC BY-SA 3.0 US
 	\url{https://creativecommons.org/licenses/by-sa/3.0/us/}
 \par\box\@permissionbox
-\copyrightline\par
-\doiline
 \vskip-13pt
 \strut
 \end@float
@@ -1639,8 +1635,6 @@ Online Appendix to:\par\@title\par{}}}\vskip 12\p@
 \hrule height .2pt
 \par
 \def\endbottomstuff{%
-\copyrightline\par
-\doiline
 \vskip-13pt
 \strut
 \end@float
